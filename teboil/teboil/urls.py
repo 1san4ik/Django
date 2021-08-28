@@ -19,6 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-    path('hellodjango', include('firstapp.urls')),
-    path('second_render', include('second_app.urls')),
+    path('hellodjango/', include('firstapp.urls')),
+    path('second_render/', include('second_app.urls')),
+    path('templates/', include('third_app.urls')),
 ]

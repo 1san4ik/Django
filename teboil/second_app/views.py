@@ -7,8 +7,7 @@ def second_render(request):
 
 
 def second_redirect(request):
-    if 'second_redirect':
-        return redirect('second_render', permanent=False)
+    return redirect('second_render', permanent=False)
 
 
 def httpresponse(request):
