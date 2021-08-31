@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Task
 
 
 def templates(request):
-    return render(request, 'third_app/home.html')
+    tasks = Task.objects.order_by('-id')
+    return render(request, 'third_app/product_info.html', {'text': tasks})

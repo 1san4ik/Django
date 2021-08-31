@@ -1,0 +1,50 @@
+{% extends 'third_app/home.html' %}
+
+{% block product_info %}
+    {% for el in text|slice:":6" %}
+
+        <div class="product col-sm-4">
+        <div>
+        <div class="product_img">
+            <a href="templates">
+                <img src="/MySite/teboil/images/Diamond_carat_IV_5w30_4L.jpg" alt="Diamond eXtreme 10W-60 (4l)">
+            </a>
+        </div>
+
+        <div class="product_info">
+            <div class="product_name">
+                <a href=" ">{{ el.title|slice:":33" }}</a>
+            </div>
+            <div class="product_desc"><p>{{ el.text|slice:":55" }} ...</p></div>
+            <div class="clearfix">
+                <span class="product_price">
+
+                    <span class="money" data-currency-usd="$78.00">$78.00</span>
+
+                </span>
+                <div class="product_links">
+                    <!--
+            This is just a regular add product form.
+            You should be able to add any valid input fields to it
+        -->
+        <form method="post" action="/cart/add">
+            <!-- We can leave this in, since the select comes later,
+                so it will override if user picks something different. -->
+
+                <input type="hidden" name="id" value="22525687791664">
+
+            <!-- START BUY -->
+
+                    <button class="btn btn-cart" type="submit"><i class="fa fa-shopping-cart"></i> В корзину</button>
+
+            <!-- END BUY -->
+        </form>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+    {% endfor %}
+{% endblock %}

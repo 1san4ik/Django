@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Task
 from .forms import TaskForm
-from django.http import HttpResponse
 
 
 def index(request):
