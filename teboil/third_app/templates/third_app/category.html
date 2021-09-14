@@ -1,0 +1,52 @@
+{% extends 'third_app/product_info.html' %}
+
+{% block page_heading %}
+<h2 class="page_heading">{{ category_name.name }}</h2>
+{% endblock %}
+{% block product_info %}
+    {% for el in PRODUCT|slice:":3"  %}
+        <div class="product col-sm-4">
+        <div>
+        <div class="product_img">
+            <a href="{{ el.id }}">
+                <img src="{{ el.image.url }}" alt="{{ el.title|slice:':55' }}">
+            </a>
+        </div>
+
+        <div class="product_info">
+            <div class="product_name">
+                <a href="{{ el.slug }}">{{ el.title|safe|slice:":60" }}</a>
+            </div>
+            <div class="product_desc"><p>{{ el.text|safe|slice:":80" }} ...</p></div>
+            <div class="clearfix">
+                <span class="product_price">
+
+                    <span class="money" data-currency-usd="{{ el.price }}">{{ el.price }} грн.</span>
+
+                </span>
+                <div class="product_links">
+                    <!--
+            This is just a regular add product form.
+            You should be able to add any valid input fields to it
+        -->
+        <form method="post" action="/cart/add">
+            <!-- We can leave this in, since the select comes later,
+                so it will override if user picks something different. -->
+
+                <input type="hidden" name="id" value="22525687791664">
+
+            <!-- START BUY -->
+
+                    <button class="btn btn-cart" type="submit"><i class="fa fa-shopping-cart"></i> В корзину</button>
+
+            <!-- END BUY -->
+        </form>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+    {% endfor %}
+{% endblock %}

@@ -1,57 +1,36 @@
-{% extends 'third_app/home.html' %}
+
 {% block bestseller %}
-
-        <div class="widget widget_best_sellers">
-        <h3 class="widget_header">Новинки</h3>
-        <div class="widget_content">
-            <div class="product_listing_sidebar">
-
-                <div class="product">
-                <div>
-                <div class="product_img">
-                    <a href="/products/alpine-ida-x305s-digital-media-receiver">
-                    <img src="//cdn.shopify.com/s/files/1/0153/5855/8256/products/audiovox_r2he50cl_ir_wireless_dual_channel_heads_headphones_01_small.png?v=1553077371" alt="Alpine iDA-X305S - Digital Media Receiver">
-                    </a>
-                </div>
-
-                <div class="product_info">
-                    <div class="product_name">
-                        <a href="/products/alpine-ida-x305s-digital-media-receiver">Alpine iDA-X305S - Digital Media Receiver</a>
-                    </div>
-                    <div class="product_desc"><p>Lorem ipsum dolor sit amet, consectetur adipisicing el...</p></div>
-                    <div class="clearfix">
-                        <span class="product_price">
-                            From
-                            <span class="money" data-currency-usd="$256.00">$256.00</span>
-
-                        </span>
-                        <div class="product_links">
-                            <!--
-        This is just a regular add product form.
-        You should be able to add any valid input fields to it
-    -->
-    <form method="post" action="/cart/add">
-        <!-- We can leave this in, since the select comes later,
-            so it will override if user picks something different. -->
-
-            <input type="hidden" name="id" value="22525688741936">
-
-
-
-
-        <!-- START BUY -->
-
-                <button class="btn btn-cart" type="submit"><i class="fa fa-shopping-cart"></i> В корзину</button>
-
-        <!-- END BUY -->
-    </form>
-                        </div>
-                    </div>
-                </div>
-                  </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+<div class="widget widget_best_sellers">
+	<h3 class="widget_header">Новинки</h3>
+	<div class="widget_content">
+		<div class="product_listing_sidebar">
+			<div class="product">
+				<div>
+					<div class="product_img"> <a href="/products/alpine-ida-x305s-digital-media-receiver">
+                <img src="//cdn.shopify.com/s/files/1/0153/5855/8256/products/audiovox_r2he50cl_ir_wireless_dual_channel_heads_headphones_01_small.png?v=1553077371" alt="Alpine iDA-X305S - Digital Media Receiver">
+                </a> </div>
+					<div class="product_info">
+						<div class="product_name"> <a href="/products/alpine-ida-x305s-digital-media-receiver">Alpine iDA-X305S - Digital Media Receiver</a> </div>
+						<div class="product_desc">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing el...</p>
+						</div>
+						<div class="clearfix"> <span class="product_price">
+                        From
+                        <span class="money" data-currency-usd="$256.00">$256.00</span> </span>
+							<div class="product_links">
+								<!--  This is just a regular add product form. You should be able to add any valid input fields to it -->
+								<form method="post" action="/cart/add">
+									<!-- We can leave this in, since the select comes later, so it will override if user picks something different. -->
+                                    <input type="hidden" name="id" value="22525688741936">
+									<!-- START BUY --><button class="btn btn-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+									<!-- END BUY -->
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}

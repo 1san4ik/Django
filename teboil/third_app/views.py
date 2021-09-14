@@ -3,6 +3,7 @@ from .forms import UserRegisterForm, UserLoginForm
 from .models import Product
 from django.contrib import messages
 from django.contrib.auth import login, logout
+from django.views.generic import ListView
 
 
 def templates(request):
@@ -11,6 +12,25 @@ def templates(request):
         'PRODUCT': name_product
     }
     return render(request, 'third_app/product_info.html', context)
+
+
+def categoryshow(request, product_id):
+    category_item = Category.objects.get(id=product_id)
+    category_name = Category.objects.all()
+    context = {
+        'CATEGORY': category_name
+    }
+    return render(request, 'third_app/category.html', locals())
+
+
+
+def productshow(request, product_id):
+    product_item = Product.objects.get(id=product_id)
+    product_name = Product.objects.all()
+    context = {
+        'PRODUCT': product_name
+    }
+    return render(request, 'third_app/product_show.html', locals())
 
 
 def register(request):
@@ -45,35 +65,12 @@ def user_logout(request):
     return redirect('login')
 
 
+class Search(ListView):
 
-# class LoginView(CartMixin, View):
-#
-#     def get(self, request, *args, **kwargs):
-#         form = LoginForm(request.POST or None)
-#         category = Category.object.all()
-#         context = {'form': form, 'category': category, 'cart': self.cart}
-#         return render(request, 'login.html', context)
-#
-#     def post(self, request, *args, **kwargs):
-#         form = LoginForm(request.POST or None)
-#         if form.is_valid():
-#             username = form.cleaned_data
-#             password = form.cleaned_data
-#             user = authenticate(username=username, password=password)
-#             if user:
-#                 login(request, user)
-#             return HttpResponseRedirect('templates')
-#         return render(request, 'login.html', {'form': form, 'cart': self.cart})
+    def get_queryset(self):
+        return Product.objects.filter(title__icontains=self.request.GET.get("q"))
 
-# def add_to_cart(request, product_id, quantity):
-#     product = Product.objects.get(id=product_id)
-#     cart = Cart(request)
-#     cart.add(product, product.unit_price, quantity)
-#
-# def remove_from_cart(request, product_id):
-#     product = Product.objects.get(id=product_id)
-#     cart = Cart(request)
-#     cart.remove(product)
-#
-# def get_cart(request):
-#     return render_to_response('cart.html', dict(cart=Cart(request)))
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context["q"] = f'q={self.request.GET.get("q")}&'
+        return context

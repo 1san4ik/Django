@@ -5,14 +5,14 @@
         <div class="product col-sm-4">
         <div>
         <div class="product_img">
-            <a href="templates">
+            <a href="{{ el.id }}">
                 <img src="{{ el.image.url }}" alt="{{ el.title|slice:':55' }}">
             </a>
         </div>
 
         <div class="product_info">
             <div class="product_name">
-                <a href="#">{{ el.title|safe|slice:":60" }}</a>
+                <a href="{{ el.slug }}">{{ el.title|safe|slice:":60" }}</a>
             </div>
             <div class="product_desc"><p>{{ el.text|safe|slice:":80" }} ...</p></div>
             <div class="clearfix">
@@ -53,14 +53,14 @@
         <div class="product col-sm-4">
         <div>
         <div class="product_img">
-            <a href="templates">
+            <a href="{{ el.id }}">
                 <img src="{{ el.image.url }}" alt="{{ el.title|slice:':55' }}">
             </a>
         </div>
 
         <div class="product_info">
             <div class="product_name">
-                <a href="#">{{ el.title|slice:":60" }}</a>
+                <a href="{{ el.slug }}">{{ el.title|safe|slice:":60" }}</a>
             </div>
             <div class="product_desc"><p>{{ el.text|safe|slice:":80" }} ...</p></div>
             <div class="clearfix">

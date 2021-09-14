@@ -1,0 +1,92 @@
+{% extends 'third_app/home.html' %}
+
+{% block breadcrumb %}
+<ul class="breadcrumb">
+  <li class="firstItem"><a href="{% url 'templates' %}" class="homepage-link" title="Вернуться на главную">Главная</a></li>
+  <li>  <a href="{{ product_item.category.slug }}" title="">{{ product_item.category.name }}</a> </li>
+  <li class="lastItem"><span class="page-title">{{ product_item.title }}</span></li>
+</ul>
+{% endblock %}
+
+{% block content_center %}
+<div itemscope="" itemtype="http://schema.org/Product" class="product-scope">
+  <meta itemprop="url" content="https://theme645-car-audio-free.myshopify.com/products/alpine-ixa-w404-digital-media-receiver">
+  <meta itemprop="image" content="//cdn.shopify.com/s/files/1/0153/5855/8256/products/boss_cx154dvc_chaos_exxtreme_15_subwoofer_dual_4ohm_voice_coils_01_grande.png?v=1553077364">
+  <div class="product_wrap">
+    <div class="row">
+     <!-- ******************    product-photos *********************************  -->
+      <div id="product_image-container" class="col-sm-5">
+        <div class="product_image">
+          <div class="bx-wrapper" style="max-width: 100%;">
+            <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 343px;">
+              <ul class="bxslider" style="width: 645%; position: relative; transition-duration: 0s; transform: translate3d(-686px, 0px, 0px);">
+                <li class="lastItem bx-clone" style="float: left; list-style: none; position: relative; width: 343px;">
+                  <a rel="product_images" class="fancybox" href="{{ product_item.image.url }}" title="{{ product_item.title }}"><img src="{{ product_item.image.url }}" alt="{{ product_item.title }}"></a>
+                </li>
+                <li class="firstItem" style="float: left; list-style: none; position: relative; width: 343px;">
+                  <a rel="product_images" class="fancybox" href="{{ product_item.image.url }}" title="{{ product_item.title }}"> <img src="{{ product_item.image.url }}" alt="{{ product_item.title }}"></a>
+                </li>
+                <li style="float: left; list-style: none; position: relative; width: 343px;">
+                  <a rel="product_images" class="fancybox" href="{{ product_item.image.url }}" title="{{ product_item.title }}"><img src="{{ product_item.image.url }}" alt="{{ product_item.title }}"></a>
+                </li>
+                <li class="lastItem" style="float: left; list-style: none; position: relative; width: 343px;">
+                  <a rel="product_images" class="fancybox" href="{{ product_item.image.url }}" title="{{ product_item.title }}"><img src="{{ product_item.image.url }}" alt="{{ product_item.title }}"></a>
+                </li>
+                <li class="firstItem bx-clone" style="float: left; list-style: none; position: relative; width: 343px;">
+                  <a rel="product_images" class="fancybox" href="{{ product_item.image.url }}" title="{{ product_item.image.url }}"><img src="{{ product_item.image.url }}" alt="{{ product_item.title }}"></a>
+                </li>
+              </ul>
+            </div>
+<!--            <div class="bx-controls bx-has-controls-direction">-->
+<!--              <div class="bx-controls-direction"><a class="bx-prev" href="">Назад</a><a class="bx-next" href="">Вперед</a></div>-->
+<!--            </div>-->
+          </div>
+        </div>
+<!--        <div id="bx-pager" class="product_image-additioanl">-->
+<!--          <a href="" data-slide-index="0" class=""> <img src="//cdn.shopify.com/s/files/1/0153/5855/8256/products/boss_cx154dvc_chaos_exxtreme_15_subwoofer_dual_4ohm_voice_coils_01_compact.png?v=1553077364" alt="Alpine iXA-W404 - Digital Media Receiver"> </a>-->
+<!--          <a href="" data-slide-index="1" class="active"> <img src="//cdn.shopify.com/s/files/1/0153/5855/8256/products/boss_cx154dvc_chaos_exxtreme_15_subwoofer_dual_4ohm_voice_coils_02_compact.png?v=1553077364" alt="Alpine iXA-W404 - Digital Media Receiver"> </a>-->
+<!--          <a href="" data-slide-index="2" class=""> <img src="//cdn.shopify.com/s/files/1/0153/5855/8256/products/boss_cx154dvc_chaos_exxtreme_15_subwoofer_dual_4ohm_voice_coils_03_compact.png?v=1553077364" alt="Alpine iXA-W404 - Digital Media Receiver"> </a>-->
+<!--        </div>-->
+      </div>
+      <!-- ******************    #product-photos *********************************  -->
+      <div class="col-sm-7">
+        <div itemprop="name" class="product_name">{{ product_item.title }}</div>
+        <form action="/cart/add" method="post" enctype="multipart/form-data" class="form-horizontal" id="product-actions">
+          <div class="options clearfix">
+            <div id="product_price">
+              <p class="price product-price"><span class="money" data-currency-usd="{{ product_item.price }} грн." data-currency="UAH">{{ product_item.price }} грн.</span></p>
+            </div>
+            <div class="variants-wrapper clearfix visuallyhidden">
+              <div class="selector-wrapper">
+                <select class="single-option-selector" data-option="option1" id="product-select-option-0">
+                  <option value="Default">По умолчанию</option>
+                </select>
+              </div>
+              <select id="product-select" name="id" style="display: none;">
+                <option value="22525687791664">{{ product_item.price }} грн.</option>
+              </select>
+            </div>
+            <div id="purchase">
+              <label for="quantity">Кол-во: </label>
+              <input min="1" type="number" id="quantity" name="quantity" value="1" class="form-control input-small">
+              <button class="btn btn-cart" type="submit" id="add-to-cart"><i class="fa fa-shopping-cart"></i> В корзину</button>
+            </div>
+          </div>
+          <!-- /.options -->
+        </form>
+        <div class="product_details">
+          <div class="product_type">Категория: <a href="{{ product_item.category.slug }}" title="Subwoofers">{{ product_item.category.name }}</a></div>
+          <div class="product_vendor">Производитель: <a href="#" title="Teboil">Teboil</a></div>
+        </div>
+        <div id="product_description" class="rte" itemprop="description">
+          <h4>Описание:</h4>
+          <p>{{ product_item.text|safe }}</p>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
