@@ -1,0 +1,1 @@
+default_app_config = "third_app.apps.ThirdAppConfig"

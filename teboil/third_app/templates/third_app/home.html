@@ -1,360 +1,17 @@
-<html class=""><!--<![endif]--><head>
+{% block site_header %}
+<html class=""><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
     <title>Teboil | Oil Teboil</title>
-
 
     <link rel="canonical" href="{% url 'home' %}">
   	<link href="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/favicon.ico?v=11952079576307377263" rel="shortcut icon" type="image/x-icon">
-    <script type="text/javascript" async="" src="https://cdn.shopify.com/s/trekkie.storefront.4425f6026de6139f5e73bf3f1e7e46aca95ea1e8.min.js"></script><script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/15358558256/digital_wallets/dialog">
-<link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
-<script id="shopify-features" type="application/json">{"accessToken":"43d1d2bc8a99b339dfb1b8850f240f2d","betas":["rich-media-storefront-analytics"],"domain":"{% url 'home' %}","predictiveSearch":true,"shopId":15358558256,"smart_payment_buttons_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js","dynamic_checkout_cart_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js","locale":"en"}</script>
-<script>(function(){if ("sendBeacon" in navigator && "performance" in window) {var session_token = document.cookie.match(/_shopify_s=([^;]*)/);function handle_abandonment_event(e) {var entries = performance.getEntries().filter(function(entry) {return /monorail-edge.shopifysvc.com/.test(entry.name);});if (!window.abandonment_tracked && entries.length === 0) {window.abandonment_tracked = true;var currentMs = Date.now();var navigation_start = performance.timing.navigationStart;var payload = {shop_id: 15358558256,url: window.location.href,navigation_start,duration: currentMs - navigation_start,session_token: session_token && session_token.length === 2 ? session_token[1] : "",page_type: "index"};window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({schema_id: "online_store_buyer_site_abandonment/1.1",payload: payload,metadata: {event_created_at_ms: currentMs,event_sent_at_ms: currentMs}}));}}window.addEventListener('pagehide', handle_abandonment_event);}}());</script>
-<script>var Shopify = Shopify || {};
-Shopify.shop = "{% url 'home' %}";
-Shopify.locale = "en";
-Shopify.currency = {"active":"USD","rate":"1.0"};
-Shopify.country = "US";
-Shopify.theme = {"name":"theme645","id":47182676016,"theme_store_id":null,"role":"main"};
-Shopify.theme.handle = "null";
-Shopify.theme.style = {"id":null,"handle":null};
-Shopify.cdnHost = "cdn.shopify.com";</script>
-<script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
-<script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
-<script id="__st">var __st={"a":15358558256,"offset":-14400,"reqid":"abb66146-d16f-44aa-9dd9-080cbb6c48f8","pageurl":"theme645-car-audio-free.myshopify.com\/","u":"6ac6b257824b","p":"home"};</script>
-<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
-<script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
-window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
-window.ShopifyAnalytics.meta.currency = 'USD';
-var meta = {"page":{"pageType":"home"},"evids":{"pv":"Page View","vprd":"Viewed Product","ps":"Performed Search"}};
-for (var attr in meta) {
-  window.ShopifyAnalytics.meta[attr] = meta[attr];
-}</script>
-<script>window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
-
-};
-</script>
-<script class="analytics">(function () {
-  var customDocumentWrite = function(content) {
-    var jquery = null;
-
-    if (window.jQuery) {
-      jquery = window.jQuery;
-    } else if (window.Checkout && window.Checkout.$) {
-      jquery = window.Checkout.$;
-    }
-
-    if (jquery) {
-      jquery('body').append(content);
-    }
-  };
-
-  var hasLoggedConversion = function(token) {
-    if (token) {
-      return document.cookie.indexOf('loggedConversion=' + token) !== -1;
-    }
-    return false;
-  }
-
-  var setCookieIfConversion = function(token) {
-    if (token) {
-      var twoMonthsFromNow = new Date(Date.now());
-      twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
-
-      document.cookie = 'loggedConversion=' + token + '; expires=' + twoMonthsFromNow;
-    }
-  }
-
-  var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
-  if (trekkie.integrations) {
-    return;
-  }
-  trekkie.methods = [
-    'identify',
-    'page',
-    'ready',
-    'track',
-    'trackForm',
-    'trackLink'
-  ];
-  trekkie.factory = function(method) {
-    return function() {
-      var args = Array.prototype.slice.call(arguments);
-      args.unshift(method);
-      trekkie.push(args);
-      return trekkie;
-    };
-  };
-  for (var i = 0; i < trekkie.methods.length; i++) {
-    var key = trekkie.methods[i];
-    trekkie[key] = trekkie.factory(key);
-  }
-  trekkie.load = function(config) {
-    trekkie.config = config || {};
-    trekkie.config.initialDocumentCookie = document.cookie;
-    var first = document.getElementsByTagName('script')[0];
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.onerror = function(e) {
-      var scriptFallback = document.createElement('script');
-      scriptFallback.type = 'text/javascript';
-      scriptFallback.onerror = function(error) {
-              var Monorail = {
-      produce: function produce(monorailDomain, schemaId, payload) {
-        var currentMs = new Date().getTime();
-        var event = {
-          schema_id: schemaId,
-          payload: payload,
-          metadata: {
-            event_created_at_ms: currentMs,
-            event_sent_at_ms: currentMs
-          }
-        };
-        return Monorail.sendRequest("https://" + monorailDomain + "/v1/produce", JSON.stringify(event));
-      },
-      sendRequest: function sendRequest(endpointUrl, payload) {
-        // Try the sendBeacon API
-        if (window && window.navigator && typeof window.navigator.sendBeacon === 'function' && typeof window.Blob === 'function' && !Monorail.isIos12()) {
-          var blobData = new window.Blob([payload], {
-            type: 'text/plain'
-          });
-
-          if (window.navigator.sendBeacon(endpointUrl, blobData)) {
-            return true;
-          } // sendBeacon was not successful
-
-        } // XHR beacon
-
-        var xhr = new XMLHttpRequest();
-
-        try {
-          xhr.open('POST', endpointUrl);
-          xhr.setRequestHeader('Content-Type', 'text/plain');
-          xhr.send(payload);
-        } catch (e) {
-          console.log(e);
-        }
-
-        return false;
-      },
-      isIos12: function isIos12() {
-        return window.navigator.userAgent.lastIndexOf('iPhone; CPU iPhone OS 12_') !== -1 || window.navigator.userAgent.lastIndexOf('iPad; CPU OS 12_') !== -1;
-      }
-    };
-    Monorail.produce('monorail-edge.shopifysvc.com',
-      'trekkie_storefront_load_errors/1.1',
-      {shop_id: 15358558256,
-      theme_id: 47182676016,
-      app_name: "storefront",
-      context_url: window.location.href,
-      source_url: "https://cdn.shopify.com/s/trekkie.storefront.4425f6026de6139f5e73bf3f1e7e46aca95ea1e8.min.js"});
-
-      };
-      scriptFallback.async = true;
-      scriptFallback.src = 'https://cdn.shopify.com/s/trekkie.storefront.4425f6026de6139f5e73bf3f1e7e46aca95ea1e8.min.js';
-      first.parentNode.insertBefore(scriptFallback, first);
-    };
-    script.async = true;
-    script.src = 'https://cdn.shopify.com/s/trekkie.storefront.4425f6026de6139f5e73bf3f1e7e46aca95ea1e8.min.js';
-    first.parentNode.insertBefore(script, first);
-  };
-  trekkie.load(
-    {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":15358558256,"isMerchantRequest":null,"themeId":47182676016,"themeCityHash":"8413980813733658129","contentLanguage":"en","currency":"USD"},"isServerSideCookieWritingEnabled":true,"expectS2SEventId":true},"Session Attribution":{},"S2S":{"facebookCapiEnabled":false}}
-  );
-
-  var loaded = false;
-  trekkie.ready(function() {
-    if (loaded) return;
-    loaded = true;
-
-    window.ShopifyAnalytics.lib = window.trekkie;
-
-
-    var originalDocumentWrite = document.write;
-    document.write = customDocumentWrite;
-    try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
-    document.write = originalDocumentWrite;
-      (function () {
-        if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) {
-          return;
-        }
-        window.BOOMR = window.BOOMR || {};
-        window.BOOMR.snippetStart = new Date().getTime();
-        window.BOOMR.snippetExecuted = true;
-        window.BOOMR.snippetVersion = 12;
-        window.BOOMR.application = "storefront-renderer";
-        window.BOOMR.themeName = "";
-        window.BOOMR.themeVersion = "";
-        window.BOOMR.shopId = 15358558256;
-        window.BOOMR.themeId = 47182676016;
-        window.BOOMR.url =
-          "https://cdn.shopify.com/shopifycloud/boomerang/shopify-boomerang-1.0.0.min.js";
-        var where = document.currentScript || document.getElementsByTagName("script")[0];
-        var parentNode = where.parentNode;
-        var promoted = false;
-        var LOADER_TIMEOUT = 3000;
-        function promote() {
-          if (promoted) {
-            return;
-          }
-          var script = document.createElement("script");
-          script.id = "boomr-scr-as";
-          script.src = window.BOOMR.url;
-          script.async = true;
-          parentNode.appendChild(script);
-          promoted = true;
-        }
-        function iframeLoader(wasFallback) {
-          promoted = true;
-          var dom, bootstrap, iframe, iframeStyle;
-          var doc = document;
-          var win = window;
-          window.BOOMR.snippetMethod = wasFallback ? "if" : "i";
-          bootstrap = function(parent, scriptId) {
-            var script = doc.createElement("script");
-            script.id = scriptId || "boomr-if-as";
-            script.src = window.BOOMR.url;
-            BOOMR_lstart = new Date().getTime();
-            parent = parent || doc.body;
-            parent.appendChild(script);
-          };
-          if (!window.addEventListener && window.attachEvent && navigator.userAgent.match(/MSIE [67]./)) {
-            window.BOOMR.snippetMethod = "s";
-            bootstrap(parentNode, "boomr-async");
-            return;
-          }
-          iframe = document.createElement("IFRAME");
-          iframe.src = "about:blank";
-          iframe.title = "";
-          iframe.role = "presentation";
-          iframe.loading = "eager";
-          iframeStyle = (iframe.frameElement || iframe).style;
-          iframeStyle.width = 0;
-          iframeStyle.height = 0;
-          iframeStyle.border = 0;
-          iframeStyle.display = "none";
-          parentNode.appendChild(iframe);
-          try {
-            win = iframe.contentWindow;
-            doc = win.document.open();
-          } catch (e) {
-            dom = document.domain;
-            iframe.src = "javascript:var d=document.open();d.domain='" + dom + "';void(0);";
-            win = iframe.contentWindow;
-            doc = win.document.open();
-          }
-          if (dom) {
-            doc._boomrl = function() {
-              this.domain = dom;
-              bootstrap();
-            };
-            doc.write("<body onload='document._boomrl();'>");
-          } else {
-            win._boomrl = function() {
-              bootstrap();
-            };
-            if (win.addEventListener) {
-              win.addEventListener("load", win._boomrl, false);
-            } else if (win.attachEvent) {
-              win.attachEvent("onload", win._boomrl);
-            }
-          }
-          doc.close();
-        }
-        var link = document.createElement("link");
-        if (link.relList &&
-          typeof link.relList.supports === "function" &&
-          link.relList.supports("preload") &&
-          ("as" in link)) {
-          window.BOOMR.snippetMethod = "p";
-          link.href = window.BOOMR.url;
-          link.rel = "preload";
-          link.as = "script";
-          link.addEventListener("load", promote);
-          link.addEventListener("error", function() {
-            iframeLoader(true);
-          });
-          setTimeout(function() {
-            if (!promoted) {
-              iframeLoader(true);
-            }
-          }, LOADER_TIMEOUT);
-          BOOMR_lstart = new Date().getTime();
-          parentNode.appendChild(link);
-        } else {
-          iframeLoader(false);
-        }
-        function boomerangSaveLoadTime(e) {
-          window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
-        }
-        if (window.addEventListener) {
-          window.addEventListener("load", boomerangSaveLoadTime, false);
-        } else if (window.attachEvent) {
-          window.attachEvent("onload", boomerangSaveLoadTime);
-        }
-        if (document.addEventListener) {
-          document.addEventListener("onBoomerangLoaded", function(e) {
-            e.detail.BOOMR.init({
-              producer_url: "https://monorail-edge.shopifysvc.com/v1/produce",
-              ResourceTiming: {
-                enabled: true,
-                trackedResourceTypes: ["script", "img", "css"]
-              },
-            });
-            e.detail.BOOMR.t_end = new Date().getTime();
-          });
-        } else if (document.attachEvent) {
-          document.attachEvent("onpropertychange", function(e) {
-            if (!e) e=event;
-            if (e.propertyName === "onBoomerangLoaded") {
-              e.detail.BOOMR.init({
-                producer_url: "https://monorail-edge.shopifysvc.com/v1/produce",
-                ResourceTiming: {
-                  enabled: true,
-                  trackedResourceTypes: ["script", "img", "css"]
-                },
-              });
-              e.detail.BOOMR.t_end = new Date().getTime();
-            }
-          });
-        }
-      })();
-
-
-    window.ShopifyAnalytics.lib.page(null,{"pageType":"home"});
-
-    var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
-    var token = match? match[1]: undefined;
-    if (!hasLoggedConversion(token)) {
-      setCookieIfConversion(token);
-
-    }
-  });
-
-
-      var eventsListenerScript = document.createElement('script');
-      eventsListenerScript.async = true;
-      eventsListenerScript.src = "//cdn.shopify.com/shopifycloud/shopify/assets/shop_events_listener-eb19870e6f215e4e4acd8067d24ecfcbfee2d96d96aa8607e8fd45edf40eacc6.js";
-      document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
-
-})();</script><script async="" src="//cdn.shopify.com/shopifycloud/shopify/assets/shop_events_listener-eb19870e6f215e4e4acd8067d24ecfcbfee2d96d96aa8607e8fd45edf40eacc6.js"></script>
-<script>!function(c){c.addEventListener("DOMContentLoaded",function(){window.Shopify=window.Shopify||{},window.Shopify.recaptchaV3=window.Shopify.recaptchaV3||{siteKey:"6LcCR2cUAAAAANS1Gpq_mDIJ2pQuJphsSQaUEuc9"};var e,o=(e=['form[action^="/contact"] input[name="form_type"][value="contact"]','form[action*="/comments"] input[name="form_type"][value="new_comment"]','form[action^="/account"] input[name="form_type"][value="customer_login"]','form[action^="/account"] input[name="form_type"][value="recover_customer_password"]','form[action^="/account"] input[name="form_type"][value="create_customer"]'].join(","),null===(e=c.querySelector(e))?[]:e.form.elements);function n(){var e=document.createElement("script");e.setAttribute("src","https://cdn.shopify.com/shopifycloud/storefront-recaptcha-v3/v0.5/index.js"),document.body.appendChild(e);for(var t=0;t<o.length;t++)o[t].removeEventListener("focus",n)}for(var t=0;t<o.length;t++)o[t].addEventListener("focus",n,!1)})}(document);</script>
-<script integrity="sha256-pVJhp6mHZ0dJmJmDtYierarGeV2NSFSPthRwqW7blSQ=" data-source-attribution="shopify.loadfeatures" defer="defer" src="//cdn.shopify.com/shopifycloud/shopify/assets/storefront/load_feature-a55261a7a987674749989983b5889eadaac6795d8d48548fb61470a96edb9524.js" crossorigin="anonymous"></script>
-<script integrity="sha256-h+g5mYiIAULyxidxudjy/2wpCz/3Rd1CbrDf4NudHa4=" data-source-attribution="shopify.dynamic-checkout" defer="defer" src="//cdn.shopify.com/shopifycloud/shopify/assets/storefront/features-87e8399988880142f2c62771b9d8f2ff6c290b3ff745dd426eb0dfe0db9d1dae.js" crossorigin="anonymous"></script>
-
-
-<script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
-
     <link href="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/bootstrap.css?v=9344330935716629072" rel="stylesheet" type="text/css" media="all">
     <link href="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/assets.css?v=6220646948826378266" rel="stylesheet" type="text/css" media="all">
     <link href="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/style.css?v=1234769056649545319" rel="stylesheet" type="text/css" media="all">
     <link href="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/responsive.css?v=14838828103398406929" rel="stylesheet" type="text/css" media="all">
     <link href="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/font-awesome.css?v=6607705951858157338" rel="stylesheet" type="text/css" media="all">
-
 	<link href="//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900" rel="stylesheet" type="text/css">
 
@@ -372,8 +29,6 @@ for (var attr in meta) {
 		.gradient {filter: none;}
 	</style>
     <![endif]-->
-
-
 
     <script src="//cdn.shopify.com/shopifycloud/shopify/assets/themes_support/option_selection-fe6b72c2bbdd3369ac0bfefe8648e3c889efca213baefd4cfb0dd9363563831f.js" type="text/javascript"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
@@ -394,76 +49,70 @@ for (var attr in meta) {
   	<script src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/tm-stick-up.js?v=18077794879690036468" type="text/javascript"></script>
   	<script src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/jquery.formstyler.min.js?v=11996940689658064987" type="text/javascript"></script>
   	<script src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/jquery.equalheights.js?v=8637795356960114845" type="text/javascript"></script>
+    <script src="/services/javascripts/currencies.js" type="text/javascript"></script>
+    <script src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/jquery.currencies.min.js?v=14873190640512521766" type="text/javascript"></script>
 
+<!--<script>-->
+<!--Currency.format = 'money_format';-->
+<!--var shopCurrency = 'USD';-->
 
-<script src="/services/javascripts/currencies.js" type="text/javascript"></script>
-<script src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/jquery.currencies.min.js?v=14873190640512521766" type="text/javascript"></script>
+<!--/* Sometimes merchants change their shop currency, let's tell our JavaScript file */-->
+<!--Currency.money_with_currency_format[shopCurrency] = "${{amount}} USD";-->
+<!--Currency.money_format[shopCurrency] = "${{amount}}";-->
 
-<script>
+<!--/* Default currency */-->
+<!--var defaultCurrency = 'USD' || shopCurrency;-->
 
+<!--/* Cookie currency */-->
+<!--var cookieCurrency = Currency.cookie.read();-->
 
-Currency.format = 'money_format';
+<!--/* Fix for customer account pages */-->
+<!--jQuery('span.money span.money').each(function() {-->
+<!--  jQuery(this).parents('span.money').removeClass('money');-->
+<!--});-->
 
+<!--/* Saving the current price */-->
+<!--jQuery('span.money').each(function() {-->
+<!--  jQuery(this).attr('data-currency-USD', jQuery(this).html());-->
+<!--});-->
 
-var shopCurrency = 'USD';
+<!--// If there's no cookie.-->
+<!--if (cookieCurrency == null) {-->
+<!--  if (shopCurrency !== defaultCurrency) {-->
+<!--    Currency.convertAll(shopCurrency, defaultCurrency);-->
+<!--  }-->
+<!--  else {-->
+<!--    Currency.currentCurrency = defaultCurrency;-->
+<!--  }-->
+<!--}-->
+<!--// If the cookie value does not correspond to any value in the currency dropdown.-->
+<!--else if (jQuery('[name=currencies]').size() && jQuery('[name=currencies] option[value=' + cookieCurrency + ']').size() === 0) {-->
+<!--  Currency.currentCurrency = shopCurrency;-->
+<!--  Currency.cookie.write(shopCurrency);-->
+<!--}-->
+<!--else if (cookieCurrency === shopCurrency) {-->
+<!--  Currency.currentCurrency = shopCurrency;-->
+<!--}-->
+<!--else {-->
+<!--  Currency.convertAll(shopCurrency, cookieCurrency);-->
+<!--}-->
 
-/* Sometimes merchants change their shop currency, let's tell our JavaScript file */
-Currency.money_with_currency_format[shopCurrency] = "${{amount}} USD";
-Currency.money_format[shopCurrency] = "${{amount}}";
+<!--jQuery('[name=currencies]').val(Currency.currentCurrency).change(function() {-->
+<!--  var newCurrency = jQuery(this).val();-->
+<!--  Currency.convertAll(Currency.currentCurrency, newCurrency);-->
+<!--  jQuery('.selected-currency').text(Currency.currentCurrency);-->
+<!--});-->
 
-/* Default currency */
-var defaultCurrency = 'USD' || shopCurrency;
+<!--var original_selectCallback = window.selectCallback;-->
+<!--var selectCallback = function(variant, selector) {-->
+<!--  original_selectCallback(variant, selector);-->
+<!--  Currency.convertAll(shopCurrency, jQuery('[name=currencies]').val());-->
+<!--  jQuery('.selected-currency').text(Currency.currentCurrency);-->
+<!--};-->
 
-/* Cookie currency */
-var cookieCurrency = Currency.cookie.read();
+<!--jQuery('.selected-currency').text(Currency.currentCurrency);-->
 
-/* Fix for customer account pages */
-jQuery('span.money span.money').each(function() {
-  jQuery(this).parents('span.money').removeClass('money');
-});
-
-/* Saving the current price */
-jQuery('span.money').each(function() {
-  jQuery(this).attr('data-currency-USD', jQuery(this).html());
-});
-
-// If there's no cookie.
-if (cookieCurrency == null) {
-  if (shopCurrency !== defaultCurrency) {
-    Currency.convertAll(shopCurrency, defaultCurrency);
-  }
-  else {
-    Currency.currentCurrency = defaultCurrency;
-  }
-}
-// If the cookie value does not correspond to any value in the currency dropdown.
-else if (jQuery('[name=currencies]').size() && jQuery('[name=currencies] option[value=' + cookieCurrency + ']').size() === 0) {
-  Currency.currentCurrency = shopCurrency;
-  Currency.cookie.write(shopCurrency);
-}
-else if (cookieCurrency === shopCurrency) {
-  Currency.currentCurrency = shopCurrency;
-}
-else {
-  Currency.convertAll(shopCurrency, cookieCurrency);
-}
-
-jQuery('[name=currencies]').val(Currency.currentCurrency).change(function() {
-  var newCurrency = jQuery(this).val();
-  Currency.convertAll(Currency.currentCurrency, newCurrency);
-  jQuery('.selected-currency').text(Currency.currentCurrency);
-});
-
-var original_selectCallback = window.selectCallback;
-var selectCallback = function(variant, selector) {
-  original_selectCallback(variant, selector);
-  Currency.convertAll(shopCurrency, jQuery('[name=currencies]').val());
-  jQuery('.selected-currency').text(Currency.currentCurrency);
-};
-
-jQuery('.selected-currency').text(Currency.currentCurrency);
-
-</script>
+<!--</script>-->
 
 
 
@@ -495,47 +144,39 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
 
             <div class="header_currency">
     <div id="currencies-styler" class="jq-selectbox jqselect" style="display: inline-block; position: relative; z-index:100"><select id="currencies" name="currencies" style="margin: 0px; padding: 0px; position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0;">
-
-
       <option value="ГРН" selected="selected">UAH</option>
           <option value="EUR">EUR</option>
           <option value="USD">USD</option>
-
-
     </select><div class="jq-selectbox__select" style="position: relative"><div class="jq-selectbox__select-text">ГРН</div><div class="jq-selectbox__trigger"><div class="jq-selectbox__trigger-arrow"></div><i class="fa fa-angle-down"></i></div></div><div class="jq-selectbox__dropdown" style="position: absolute; display: none;"><ul style="position: relative; list-style: none; overflow: auto; overflow-x: hidden"><li class="selected sel" style="display: block; white-space: nowrap;">USD</li><li class="" style="display: block; white-space: nowrap;">EUR</li><li class="" style="display: block; white-space: nowrap;">USD</li></ul></div></div>
 </div>
 
 
-
         <!-- USER MENU -->
         <ul class="header_user">
-
-                <li class="firstItem"><a href="/account/login" id="customer_login_link">Логин</a></li>
-
-                <li class="lastItem"><a href="/account/register" id="customer_register_link">Создать аккаунт</a></li>
-
-
+            {% if request.user.is_authenticated %}
+            Добро пожаловать, <b>{{ user.username }}</b> <a href="{% url 'logout' %}"> | Выйти</a>
+            {% else %}
+                <li class="firstItem"><a href="{% url 'login' %}" id="customer_login_link">Войти</a></li>
+                <li class="lastItem"><a href="{% url 'registration' %}" id="customer_register_link">Регистрация</a></li>
+            {% endif %}
         </ul>
 
 
         <!-- HEADER CART -->
         <div class="header_buttom">
-
-            <div class="header_cart"><a href="/cart"><i class="fa fa-shopping-cart"></i><span class="cart-total-items"><span class="count">0</span></span><span>товар(ов)</span>&nbsp;–&nbsp;<span class="money cart-total-price" data-currency-usd="$0.00">$0.00</span></a></div>
+            <div class="header_cart"><a href="/cart"><i class="fa fa-shopping-cart"></i><span class="cart-total-items"><span class="count count-pill count-danger">0</span></span><span>товар(ов)</span>&nbsp;–&nbsp;<span class="money cart-total-price" data-currency-usd="$0.00">$0.00</span></a></div>
 
       	</div>
     </div>
-
   	<div class="header_left">
 
         <!-- LOGO -->
         <div id="logo">
             <a href="{% url 'home' %}">
-
               <b><span class="wrap-1">Teboil </span><span class="wrap-2"></span></b>
-
             </a>
         </div>
+
         <!-- HEADER SEARCH -->
         <div class="header_search">
             <form action="/search" method="get" class="search-form" role="search">
@@ -543,9 +184,7 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
             <button id="search-submit" type="submit"><i class="fa fa-search"></i></button>
             </form>
         </div>
-
     </div>
-
 </div>
 </header>
 
@@ -564,10 +203,10 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
     </div>
 <ul class="sf-menu visible-md visible-lg clearfix sf-js-enabled sf-arrows">
 <li class="active firstItem">
-    <a href="{% url 'home' %}">Домой</a>
+    <a href="{% url 'templates' %}">Домой</a>
 </li>
 <li class="lastItem">
-    <a href="/collections/all">Каталог</a>
+    <a href="{% url 'templates' %}">Каталог</a>
 </li>
 </ul>
 <div id="mobile_menu-styler" class="jq-selectbox jqselect visible-xs visible-sm" style="display: inline-block; position: relative; z-index: 100;"><select name="main_navigation" id="mobile_menu" class="visible-xs visible-sm" style="margin: 0px; padding: 0px; position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0;">
@@ -578,201 +217,185 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
 </div>
 </div><div class="pseudoStickyBlock" style="position: relative; display: block; height: 0px;"></div>
 
+{% endblock %}  <!-- block site_header  -->
+
 
 <!-- MAIN CONTENT -->
-<div id="main" role="main">
-<div class="container">
-
-    <div class="row sidebar_left ">
-    <div class="column_center">
-    <div id="main_content" class="col-sm-9">
-
-    <!-- SHOWCASE CUSTOM BLOCKS -->
 
 
-<!--<div class="slider_wrap">-->
-<!--<div class="nivoSlider">-->
+{% block main_content %}
+    <div id="main" role="main">
+    <div class="container">
+
+        <div class="row sidebar_left ">
+        <div class="column_center">
+
+        {% block content_center %}
+        <div id="main_content" class="col-sm-9">
 
 
-<!--<a href="/collections/accessories" class="nivo-imageLink" style="display: block;">-->
-<!--<img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" alt="" title="#htmlcaption-1" style="width: 868px; visibility: hidden;">-->
-<!--</a>-->
+        <!-- SHOWCASE CUSTOM BLOCKS -->
+    <!--<div class="slider_wrap">-->
+    <!--<div class="nivoSlider">-->
+    <!--<a href="/collections/accessories" class="nivo-imageLink" style="display: block;">-->
+    <!--<img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" alt="" title="#htmlcaption-1" style="width: 868px; visibility: hidden;">-->
+    <!--</a>-->
+    <!--<a href="/blogs/blog" class="nivo-imageLink" style="display: none;">-->
+    <!--<img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide2_image.jpg?v=14651006062329674381" alt="" title="#htmlcaption-2" style="width: 868px; visibility: hidden;">-->
+    <!--</a>-->
+    <!--<a href="/collections/tv-tuners" class="nivo-imageLink" style="display: none;">-->
+    <!--<img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide3_image.jpg?v=5946478822092902150" alt="" title="#htmlcaption-3" style="width: 868px; visibility: hidden;">-->
+    <!--</a>-->
+    <!--<img class="nivo-main-image" src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="display: inline; overflow: hidden; height: 338px;"><div class="nivo-caption">-->
+    <!--        <a href="/collections/accessories">-->
+    <!--        <h2>GM-6500F Amplifier</h2>-->
+    <!--        </a>-->
+    <!--    </div><div class="nivo-slice" name="0" style="left: 0px; width: 868px; height: 338px; opacity: 1; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-0px;"></div><div class="nivo-slice" name="1" style="left: 58px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-58px;"></div><div class="nivo-slice" name="2" style="left: 116px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-116px;"></div><div class="nivo-slice" name="3" style="left: 174px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-174px;"></div><div class="nivo-slice" name="4" style="left: 232px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-232px;"></div><div class="nivo-slice" name="5" style="left: 290px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-290px;"></div><div class="nivo-slice" name="6" style="left: 348px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-348px;"></div><div class="nivo-slice" name="7" style="left: 406px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-406px;"></div><div class="nivo-slice" name="8" style="left: 464px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-464px;"></div><div class="nivo-slice" name="9" style="left: 522px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-522px;"></div><div class="nivo-slice" name="10" style="left: 580px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-580px;"></div><div class="nivo-slice" name="11" style="left: 638px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-638px;"></div><div class="nivo-slice" name="12" style="left: 696px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-696px;"></div><div class="nivo-slice" name="13" style="left: 754px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-754px;"></div><div class="nivo-slice" name="14" style="left: 812px; width: 56px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-812px;"></div></div><div class="nivo-controlNav"><a class="nivo-control active" rel="0"><i class="fa fa-circle-o"></i><span>1</span></a><a class="nivo-control" rel="1"><i class="fa fa-circle-o"></i><span>2</span></a><a class="nivo-control" rel="2"><i class="fa fa-circle-o"></i><span>3</span></a></div>-->
+    <!--</div>-->
+    <!--<div class="caption_hidden">-->
+    <!--    <div id="htmlcaption-1">-->
+    <!--        <a href="/collections/accessories">-->
+    <!--        <h2>GM-6500F Amplifier</h2>-->
+    <!--        </a>-->
+    <!--    </div>-->
+    <!--    <div id="htmlcaption-2">-->
+    <!--        <a href="/blogs/blog">-->
+    <!--        <h2>KFC-W3013 SUBWOOFER</h2>-->
+    <!--        </a>-->
+    <!--    </div>-->
+    <!--    <div id="htmlcaption-3">-->
+    <!--        <a href="/collections/tv-tuners">-->
+    <!--        <h2>CDE-178BT Receiver</h2>-->
+    <!--        </a>-->
+    <!--    </div>-->
+    <!--</div>-->
+    <!--<script type="text/javascript">-->
+    <!--$(window).load(function() {-->
+    <!--    $('.nivoSlider').nivoSlider({-->
+    <!--        effect:'fade',-->
+    <!--        animSpeed:500,-->
+    <!--        pauseTime:7000,-->
+    <!--        startSlide:0,-->
+    <!--        pauseOnHover:true,-->
+    <!--        directionNav:false,-->
+    <!--        directionNavHide:false,-->
+    <!--        controlNav:true-->
+    <!--    });-->
+    <!--});-->
+    <!--</script>-->
 
+    <div class="index-scope">
+    <h2 class="page_heading">Рекомендуемые товары</h2>
+    <div class="product-listing__index">
+        <div class="product_listing_main"><div class="row">
 
+            <!--  -------------------------------------------------------------------------------------------------   -->
 
-<!--<a href="/blogs/blog" class="nivo-imageLink" style="display: none;">-->
-<!--<img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide2_image.jpg?v=14651006062329674381" alt="" title="#htmlcaption-2" style="width: 868px; visibility: hidden;">-->
-<!--</a>-->
+            {% block product_info %} {% endblock %}
 
-<!--<a href="/collections/tv-tuners" class="nivo-imageLink" style="display: none;">-->
-<!--<img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide3_image.jpg?v=5946478822092902150" alt="" title="#htmlcaption-3" style="width: 868px; visibility: hidden;">-->
-<!--</a>-->
+            <!--  ---------------------------------------------------------------------------------------------------   -->
 
-<!--<img class="nivo-main-image" src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="display: inline; overflow: hidden; height: 338px;"><div class="nivo-caption">-->
-<!--        <a href="/collections/accessories">-->
-<!--        <h2>GM-6500F Amplifier</h2>-->
-<!--        </a>-->
-<!--    </div><div class="nivo-slice" name="0" style="left: 0px; width: 868px; height: 338px; opacity: 1; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-0px;"></div><div class="nivo-slice" name="1" style="left: 58px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-58px;"></div><div class="nivo-slice" name="2" style="left: 116px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-116px;"></div><div class="nivo-slice" name="3" style="left: 174px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-174px;"></div><div class="nivo-slice" name="4" style="left: 232px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-232px;"></div><div class="nivo-slice" name="5" style="left: 290px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-290px;"></div><div class="nivo-slice" name="6" style="left: 348px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-348px;"></div><div class="nivo-slice" name="7" style="left: 406px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-406px;"></div><div class="nivo-slice" name="8" style="left: 464px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-464px;"></div><div class="nivo-slice" name="9" style="left: 522px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-522px;"></div><div class="nivo-slice" name="10" style="left: 580px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-580px;"></div><div class="nivo-slice" name="11" style="left: 638px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-638px;"></div><div class="nivo-slice" name="12" style="left: 696px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-696px;"></div><div class="nivo-slice" name="13" style="left: 754px; width: 58px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-754px;"></div><div class="nivo-slice" name="14" style="left: 812px; width: 56px; height: 338px; opacity: 0; overflow: hidden;"><img src="//cdn.shopify.com/s/files/1/0153/5855/8256/t/2/assets/slide1_image.jpg?v=5182964069438699626" style="position:absolute; width:868px; height:auto; display:block !important; top:0; left:-812px;"></div></div><div class="nivo-controlNav"><a class="nivo-control active" rel="0"><i class="fa fa-circle-o"></i><span>1</span></a><a class="nivo-control" rel="1"><i class="fa fa-circle-o"></i><span>2</span></a><a class="nivo-control" rel="2"><i class="fa fa-circle-o"></i><span>3</span></a></div>-->
-<!--</div>-->
+        </div></div>
+        <div class="product_listing_main"><div class="row">
+             <!--  -------------------------------------------------------------------------------------------------   -->
+            {% block product_info2 %} {% endblock %}
 
-
-<!--<div class="caption_hidden">-->
-
-<!--    <div id="htmlcaption-1">-->
-<!--        <a href="/collections/accessories">-->
-<!--        <h2>GM-6500F Amplifier</h2>-->
-<!--        </a>-->
-<!--    </div>-->
-
-
-<!--    <div id="htmlcaption-2">-->
-<!--        <a href="/blogs/blog">-->
-<!--        <h2>KFC-W3013 SUBWOOFER</h2>-->
-<!--        </a>-->
-<!--    </div>-->
-
-
-
-<!--    <div id="htmlcaption-3">-->
-<!--        <a href="/collections/tv-tuners">-->
-<!--        <h2>CDE-178BT Receiver</h2>-->
-<!--        </a>-->
-<!--    </div>-->
-
-<!--</div>-->
-
-
-<!--<script type="text/javascript">-->
-<!--$(window).load(function() {-->
-<!--    $('.nivoSlider').nivoSlider({-->
-<!--        effect:'fade',-->
-<!--        animSpeed:500,-->
-<!--        pauseTime:7000,-->
-<!--        startSlide:0,-->
-<!--        pauseOnHover:true,-->
-<!--        directionNav:false,-->
-<!--        directionNavHide:false,-->
-<!--        controlNav:true-->
-<!--    });-->
-<!--});-->
-<!--</script>-->
-
-<div class="index-scope">
-  <!--
-
--->
-
-<h2 class="page_heading">Рекомендуемые товары</h2>
-
-<div class="product-listing__index">
-
-    <div class="product_listing_main"><div class="row">
-
-        <!--  -------------------------------------------------------------------------------------------------   -->
-
-        {% block product_info %} {% endblock %}
-
-        <!--  ---------------------------------------------------------------------------------------------------   -->
-
+              <!--  -------------------------------------------------------------------------------------------------   -->
     </div></div>
-    <div class="product_listing_main"><div class="row">
-        <!--  -------------------------------------------------------------------------------------------------   -->
-
-
-        <!--  ---------------------------------------------------------------------------------------------------   -->
-</div></div>
-</div>
-</div>
-
-
     </div>
     </div>
 
-
-    <div class="column_left column col-sm-3">
-    <div class="widget widget__collections">
-    <h3 class="widget_header">Каталог товаров</h3>
-    <div class="widget_content">
-        <ul class="list">
-              <li class="accessoires firstItem">
-                  <a href="/collections/accessoires" title="Accessoires">Автомобильные масла</a>
-            </li>
-              <li class="app-radio">
-                  <a href="/collections/app-radio" title="App Radio">Антифризы</a>
-            </li>
-              <li class="car-stereo">
-                  <a href="/collections/car-stereo" title="Car Stereo">Индустриальные масла</a>
-            </li>
-              <li class="speakers lastItem">
-                  <a href="/collections/speakers" title="Speakers">Смазки</a>
-            </li>
-
-        </ul>
-    </div>
-</div>
-
-    <div class="widget widget_best_sellers">
-    <h3 class="widget_header">Бестселлеры</h3>
-    <div class="widget_content">
-        <div class="product_listing_sidebar">
-
-            <div class="product">
-			<div>
-            <div class="product_img">
-                <a href="/products/alpine-ida-x305s-digital-media-receiver">
-                <img src="//cdn.shopify.com/s/files/1/0153/5855/8256/products/audiovox_r2he50cl_ir_wireless_dual_channel_heads_headphones_01_small.png?v=1553077371" alt="Alpine iDA-X305S - Digital Media Receiver">
-                </a>
-            </div>
-
-            <div class="product_info">
-                <div class="product_name">
-                    <a href="/products/alpine-ida-x305s-digital-media-receiver">Alpine iDA-X305S - Digital Media Receiver</a>
-                </div>
-              	<div class="product_desc"><p>Lorem ipsum dolor sit amet, consectetur adipisicing el...</p></div>
-                <div class="clearfix">
-                    <span class="product_price">
-                        From
-                        <span class="money" data-currency-usd="$256.00">$256.00</span>
-
-                    </span>
-                    <div class="product_links">
-                        <!--
-    This is just a regular add product form.
-    You should be able to add any valid input fields to it
--->
-<form method="post" action="/cart/add">
-    <!-- We can leave this in, since the select comes later,
-        so it will override if user picks something different. -->
-
-        <input type="hidden" name="id" value="22525688741936">
-
-
-
-
-	<!-- START BUY -->
-
-		    <button class="btn btn-cart" type="submit"><i class="fa fa-shopping-cart"></i> В корзину</button>
-
-	<!-- END BUY -->
-</form>
-                    </div>
-                </div>
-            </div>
-              </div>
-            </div>
 
         </div>
+        {% endblock %}    <!-- block content_center  -->
+
+        </div>
+        {% block content_left %}
+
+        <div class="column_left column col-sm-3">
+        <div class="widget widget__collections">
+        <h3 class="widget_header">Каталог товаров</h3>
+        <div class="widget_content">
+            <ul class="list">
+                  <li class="accessoires firstItem">
+                      <a href="/collections/accessoires" title="Accessoires">Моторное масло</a>
+                </li>
+                  <li class="app-radio">
+                      <a href="/collections/app-radio" title="App Radio">Трансмиссионное масло</a>
+                </li>
+                  <li class="car-stereo">
+                      <a href="/collections/car-stereo" title="Car Stereo">Компрессорное масло</a>
+                </li>
+                  <li class="speakers lastItem">
+                      <a href="/collections/speakers" title="Speakers">Индустриальное масло</a>
+                </li>
+
+            </ul>
+        </div>
     </div>
-</div>
+        {% block bestseller %}
+        <div class="widget widget_best_sellers">
+        <h3 class="widget_header">Новинки</h3>
+        <div class="widget_content">
+            <div class="product_listing_sidebar">
+
+                <div class="product">
+                <div>
+                <div class="product_img">
+                    <a href="/products/alpine-ida-x305s-digital-media-receiver">
+                    <img src="//cdn.shopify.com/s/files/1/0153/5855/8256/products/audiovox_r2he50cl_ir_wireless_dual_channel_heads_headphones_01_small.png?v=1553077371" alt="Alpine iDA-X305S - Digital Media Receiver">
+                    </a>
+                </div>
+
+                <div class="product_info">
+                    <div class="product_name">
+                        <a href="/products/alpine-ida-x305s-digital-media-receiver">Alpine iDA-X305S - Digital Media Receiver</a>
+                    </div>
+                    <div class="product_desc"><p>Lorem ipsum dolor sit amet, consectetur adipisicing el...</p></div>
+                    <div class="clearfix">
+                        <span class="product_price">
+                            From
+                            <span class="money" data-currency-usd="$256.00">$256.00</span>
+
+                        </span>
+                        <div class="product_links">
+                            <!--
+        This is just a regular add product form.
+        You should be able to add any valid input fields to it
+    -->
+    <form method="post" action="/cart/add">
+        <!-- We can leave this in, since the select comes later,
+            so it will override if user picks something different. -->
+
+            <input type="hidden" name="id" value="22525688741936">
+
+
+
+
+        <!-- START BUY -->
+
+                <button class="btn btn-cart" type="submit"><i class="fa fa-shopping-cart"></i> В корзину</button>
+
+        <!-- END BUY -->
+    </form>
+                        </div>
+                    </div>
+                </div>
+                  </div>
+                </div>
+
+            </div>
+        </div>
     </div>
+    {% endblock %}    <!--  block bestseller   -->
+        </div>
 
+        {% endblock %}    <!-- block content_left  -->
+        </div>
 
-
-
-	</div>
-
-</div>
-</div>
+    </div>
+    </div>
+{% endblock %} <!-- block main_content -->
 
 <!-- FOOTER -->
 <footer id="footer">
@@ -824,7 +447,6 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
 		    <ul>
 		        <li class="firstItem"><a href="https://..."><i class="fa fa-twitter-square"></i><span>Twitter</span></a></li>
 		        <li><a href="https://www.facebook.com/..."><i class="fa fa-facebook-square"></i><span>Facebook</span></a></li>
-<!--		        <li class="lastItem"><a href="https://google.com/+templatemonster"><i class="fa fa-google-plus-square"></i><span>Google+</span></a></li>-->
 
 		    </ul>
           </div>
@@ -940,8 +562,6 @@ jQuery('.selected-currency').text(Currency.currentCurrency);
 
 </script>
 
-
-
 <!-- olark code -->
 <script type="text/javascript" data-cfasync="false">// <![CDATA[
 /*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
@@ -961,9 +581,8 @@ var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
 b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
 loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
 /* custom configuration goes here (www.olark.com/documentation) */
-olark.identify('7830-582-10-3714');/*]]>*/
+olark.identify('7830-582-3714');/*]]>*/
   // ]]></script>
-<noscript><pre><a href="https://www.olark.com/site/7830-582-10-3714/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></pre></noscript>
 <!-- end olark code -->
 
 <div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><iframe data-olark="true" aria-hidden="true" title="empty" tabindex="-1" style="width: 0px; height: 0px; position: absolute; left: 0px; bottom: 0px; border: none;" __idm_frm__="567"></iframe><div data-olark="true" id="hbl-live-chat-wrapper" role="region" aria-label="Chat widget" title="Olark Live Chat Widget"><div data-reactroot="" id="olark-wrapper" class=""><div aria-live="assertive" aria-atomic="true" role="alert" id="chat-box-announcer" style="position: absolute; visibility: visible; overflow: hidden; display: block; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px); white-space: nowrap;"><p></p></div><style rel="stylesheet" type="text/css">#olark-wrapper #olark-container path.olark-primary {
