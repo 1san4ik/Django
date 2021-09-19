@@ -3,9 +3,6 @@ from django.contrib.auth import get_user_model, settings
 from django.db.models.signals import post_save
 from django.contrib.auth.models import User
 
-# from django.contrib.contenttypes.models import ContentType
-# from django.contrib.contenttypes.fields import GenericForeignKey
-# from django.db.models import CharField
 
 User = get_user_model()
 

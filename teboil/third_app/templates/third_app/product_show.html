@@ -1,5 +1,6 @@
 {% extends 'third_app/home.html' %}
 
+
 {% block breadcrumb %}
 <ul class="breadcrumb">
   <li class="firstItem"><a href="{% url 'templates' %}" class="homepage-link" title="Вернуться на главную">Главная</a></li>
@@ -51,7 +52,7 @@
       <!-- ******************    #product-photos *********************************  -->
       <div class="col-sm-7">
         <div itemprop="name" class="product_name">{{ product_item.title }}</div>
-        <form action="/cart/add" method="post" enctype="multipart/form-data" class="form-horizontal" id="product-actions">
+        <form action="#" method="GET" enctype="multipart/form-data" class="form-horizontal" id="product-actions">
           <div class="options clearfix">
             <div id="product_price">
               <p class="price product-price"><span class="money" data-currency-usd="{{ product_item.price }} грн." data-currency="UAH">{{ product_item.price }} грн.</span></p>
@@ -66,11 +67,12 @@
                 <option value="22525687791664">{{ product_item.price }} грн.</option>
               </select>
             </div>
-            <div id="purchase">
+            <div id="purchase">   <!--- *******  Кнопка Купить ************  -->
               <label for="quantity">Кол-во: </label>
               <input min="1" type="number" id="quantity" name="quantity" value="1" class="form-control input-small">
-              <button class="btn btn-cart" type="submit" id="add-to-cart"><i class="fa fa-shopping-cart"></i> В корзину</button>
-            </div>
+              <button class="btn btn-cart" type="submit" id="add-to-cart" data_product_id="{{ product_item.id }}"
+              data_product_name="{{ product_item.title }}" data_product_price="{{ product_item.price }}"><i class="fa fa-shopping-cart"></i> В корзину</button>
+            </div>                <!--- *******  #Кнопка Купить ***********  -->
           </div>
           <!-- /.options -->
         </form>

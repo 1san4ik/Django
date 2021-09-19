@@ -1,6 +1,8 @@
 from django.urls import path, include
 from . import views
 from . import models
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -12,4 +14,6 @@ urlpatterns = [
     path('search/', views.Search.get_context_data, name='search'),
     path('category/', views.categoryshow, name='category'),
     path('<product_id>/', views.productshow, name='product'),
-]
+] \
+              + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
+              + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
